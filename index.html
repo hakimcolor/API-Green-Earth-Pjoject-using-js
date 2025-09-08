@@ -15,11 +15,12 @@
       }
     </style>
   </head>
-  <body class="font-sans bg-white text-gray-900">
+  <body class="font-sans bg-[#f0fdf4] text-gray-900 relative">
     <!-- nav -->
     <nav
       class="bg-green-700 text-white flex flex-col md:flex-row items-center justify-between px-6 md:px-12 py-4 gap-y-4 md:gap-y-0"
     >
+      <div></div>
       <h1 class="text-lg md:text-xl font-bold">Green Earth</h1>
 
       <ul class="flex gap-6 text-sm md:text-base">
@@ -57,7 +58,8 @@
         </h1>
         <p class="mt-4 text-gray-600 text-sm md:text-base">
           Join our mission to plant 1 million trees and make the Earth greener
-          for future generations.
+          for future <br />
+          generations.
         </p>
         <button
           class="mt-6 bg-yellow-400 text-green-900 px-6 py-2 md:px-8 md:py-3 rounded-full font-medium hover:bg-yellow-500 transition"
@@ -67,25 +69,29 @@
       </div>
     </section>
 
-    <section>
-      <div class="grid grid-cols-3 max-w-6xl mx-auto">
-        <div>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi,
-          blanditiis.
-        </div>
-        <div>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi,
-          blanditiis.
-        </div>
-        <div>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi,
-          blanditiis.
-        </div>
+    <section class="p-4">
+      <button
+        id="hamburger"
+        class="sm:hidden mb-4 p-2 bg-blue-500 text-white rounded"
+      >
+        &#9776;
+      </button>
+
+      <div class="grid lg:grid-cols-[1fr_5fr_1fr] gap-4">
+
+        <ul id="Asideber" class="hidden sm:block p-4">
+         <li class="font-bold text-xl  px-2"> Cataegories</li>
+          <li><a href="#" class= 'block text-gray-800 hover:bg-green-700 cursor-pointer hover:text-white px-3 py-2 w-[10rem] rounded'>All Trees</a></li>
+        </ul>
+
+        <div class="bg-green-200 p-4">মাঝের কলাম (3 fraction)</div>
+
+        <div class="bg-red-200 p-4">ডান কলাম (1 fraction)</div>
       </div>
     </section>
 
     <!-- About  -->
-    <section class="bg-white py-16 px-6">
+    <section class="py-16 px-6">
       <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         <img
           src="./assets/about.png"
@@ -176,5 +182,6 @@
     <footer class="bg-green-900 text-center text-white py-4 text-sm">
       © 2025 Green Earth. All Rights Reserved.
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
