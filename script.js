@@ -1,5 +1,7 @@
+const cardbox=document.getElementById('cardbox')
 const hamburger = document.getElementById('hamburger');
 const sidebar = document.getElementById('Asideber');
+
 
 hamburger.addEventListener('click', () => {
   sidebar.classList.toggle('hidden');
@@ -54,9 +56,11 @@ const loadCategory = () => {
 };
 
 const lodcardByCategory = (cardId) => {
+  console.log(cardId);
+  
   fetch(`https://openapi.programming-hero.com/api/category/${cardId}`).then(res => res.json()).then(data => {
     console.log(data);
-    
+    displaycard(data.plants)
   })
     .catch((erron => {
       console.log(erron);
@@ -64,5 +68,17 @@ const lodcardByCategory = (cardId) => {
     }));
   
 };
+const displaycard = (cards) => {
+  // console.log(cards);
+  
+  cards.forEach((card) => {
+    cardbox.innerHTML += `<div>\
+    <img src="${card.image}
+">    <h1>${card.price}</h1>
+    </div>`;
+    
+  });
+};
+
 
 loadCategory();
